@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Кэт энерджи | Подбор программы питания</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <div class="page-header__container">
+      <a class="page-header__logo">
+        <img src="https://via.placeholder.com/34x38" width="34" height="38" alt="Интернет-магазин Cat Energy">
+      </a>
+      <a class="page-header__logo-title site-logo__image">
+        <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Cat Energy">
+      </a>
+      <button class="main-nav__toggle" aria-label="Меню сайта"></button>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item main-nav__item--current">
+            <a>Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main">
+    <h1 class="visually-hidden">Подбор программы питания для котов</h1>
+    <p class="page__heading">Подбор программы</p>
+    <p class="page__description">Заполните анкету, и мы подберем программу питания для Вашего кота</p>
+    <form class="page__feed-program-form" action="https://echo.htmlacademy.ru" method="GET">
+      <fieldset class="feed-program-form text-inputs">
+        <legend class="feed-program-form__fieldset-legend visually-hidden">Физические данные кота</legend>
+        <ul class="feed-program-form__field-list text-inputs__list">
+          <li class="feed-program-form__fild-list-item text-inputs__item">
+            <label class="feed-program-form__item-label text-inputs__item-label" for="cat-name">Имя:<sup>*</sup></label>
+            <input class="feed-program-form__item-input text-inputs__item-input" type="text" id="cat-name" name="Имя кота" placeholder="Барсик" required>
+          </li>
+          <li class="feed-program-form__item text-inputs__item">
+            <label class="feed-program-form__item-label text-inputs__item-label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+            <input class="feed-program-form__item-input text-inputs__item-input" type="number" min="0.1" max="50" step="0.1" id="cat-weight" name="Вес кота" placeholder="7" required>
+          </li>
+          <li class="feed-program-form__item text-inputs__item">
+            <label class="feed-program-form__item-label text-inputs__item-label" for="cat-age">Возраст (лет):</label>
+            <input class="feed-program-form__item-input text-inputs__item-input" type="number" min="1" max="30" step="1" id="cat-age" name="Возраст кота" placeholder="7">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="feed-program-form radio-buttons">
+        <legend class="feed-program-form__fieldset-legend visually-hidden">Цель подбора программы питания</legend>
+        <ul class="feed-program-form__field-list radio-buttons__list">
+          <li class="feed-program-form__fild-list-item radio-buttons__item">
+            <input class="feed-program-form__item-input radio-buttons__item-input" type="radio" name="Цель программы питания" id="weight-loss" value="weight-loss" checked>
+            <label class="feed-program-form__item-label radio-buttons__item-label" for="weight-loss">Похудение</label>
+          </li>
+          <li class="feed-program-form__fild-list-item radio-buttons__item">
+            <input class="feed-program-form__item-input radio-buttons__item-input" type="radio" name="Цель программы питания" id="weight-gain" value="weight-gain">
+            <label class="feed-program-form__item-label radio-buttons__item-label" for="weight-gain">Набор массы</label>
+          </li>
+          <li class="feed-program-form__fild-list-item radio-buttons__item">
+            <input class="feed-program-form__item-input radio-buttons__item-input" type="radio" name="Цель программы питания" id="need-help" value="need-help">
+            <label class="feed-program-form__item-label radio-buttons__item-label" for="need-help">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="feed-program-form text-inputs">
+        <legend class="feed-program-form__fieldset-legend">Контактные данные (владельца кота)</legend>
+        <ul class="feed-program-form__field-list text-inputs__list">
+          <li class="feed-program-form__fild-list-item text-inputs__item">
+            <label class="feed-program-form__item-label text-inputs__item-label" for="owner-email">e-mail:<sup>*</sup></label>
+            <input class="feed-program-form__item-input text-inputs__item-input" type="email" id="owner-email" name="e-mail владельца" placeholder="kuklachev@gmail.com" required>
+          </li>
+          <li class="feed-program-form__item text-inputs__item">
+            <label class="feed-program-form__item-label text-inputs__item-label" for="owner-phone">Телефон:<sup>*</sup></label>
+            <input class="feed-program-form__item-input text-inputs__item-input" type="tel" id="owner-phone" name="Телефон владельца" placeholder="8 (960) 900-60-90" required>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="feed-program-form text-inputs">
+        <legend class="feed-program-form__fieldset-legend">Комментарий</legend>
+        <label>
+          <textarea class="feed-program-form__item-input text-inputs__item-input" name="Комментарий" id="form-comment" cols="30" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </label>
+      </fieldset>
+      <fieldset class="feed-program-form checkbox-options">
+        <legend class="feed-program-form__fieldset-legend">Дополнительно</legend>
+        <ul class="feed-program-form__field-list checkbox-options__list">
+          <li class="feed-program-form__field-item checkbox-options__item">
+            <input class="feed-program-form__item-input checkbox-options__item-input" type="checkbox" name="Сахарозаменитель" id="sweetener" checked>
+            <label class="feed-program-form__item-label checkbox-options__item-label" for="sweetener">Сахарозаменитель</label>
+          </li>
+          <li class="feed-program-form__field-item checkbox-options__item">
+            <input class="feed-program-form__item-input checkbox-options__item-input" type="checkbox" name="Питьевая вода" id="water">
+            <label class="feed-program-form__item-label checkbox-options__item-label" for="water">Питьевая вода</label>
+          </li>
+          <li class="feed-program-form__field-item checkbox-options__item">
+            <input class="feed-program-form__item-input checkbox-options__item-input" type="checkbox" name="Молоко" id="milk">
+            <label class="feed-program-form__item-label checkbox-options__item-label" for="milk">Молоко</label>
+          </li>
+          <li class="feed-program-form__field-item checkbox-options__item">
+            <input class="feed-program-form__item-input checkbox-options__item-input" type="checkbox" name="Витамины" id="vitamins">
+            <label class="feed-program-form__item-label checkbox-options__item-label" for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="feed-program-form__submit-button-container">
+        <button class="feed-program-form__submit-button" type="submit">Отправить заявку</button>
+      </div>
+      <span class="feed-program-form__required-info">* — Обязательные поля</span>
+    </form>
+  </main>
+  <footer class="page__footer">
+    <div class="footer-contacts">
+      <h2 class="footer-contacts__announcement">Приглашаем к сотрудничеству диллеров!</h2>
+      <span class="footer-contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+    </div>
+    <div class="footer-contacts__map">
+      <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта расположения магазина">
+    </div>
+    <div class="footer-links">
+      <a href="#" class="footer-links__logo-title site-logo__image">
+        <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Cat Energy">
+      </a>
+      <ul class="footer-links__social-list socials-icons-list">
+        <li class="footer-links__social-item socials-icons-list__item">
+          <a class="footer-links__link footer-links__link--vkontakte socials-icons-list__link" href="#">
+            <span class="visually-hidden">Cat Energy Вконтакте</span>
+          </a>
+        </li>
+        <li class="footer-links__social-item socials-icons-list__item">
+          <a class="footer-links__link footer-links__link--instagram socials-icons-list__link" href="#">
+            <span class="visually-hidden">Cat Energy Инстаграме</span>
+          </a>
+        </li>
+        <li class="footer-links__social-item socials-icons-list__item">
+          <a class="footer-links__link footer-links__link--facebook socials-icons-list__link" href="#">
+            <span class="visually-hidden">Cat Energy Фэйсбуке</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footer-links__copyright copyright-block">
+        <a class="copyright-block__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright-block__text">HTML Academy</span>
+          <span class="copyright-block__logo">
+            <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
