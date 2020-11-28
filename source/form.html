@@ -36,48 +36,48 @@
     <form class="feed-program-form" action="https://echo.htmlacademy.ru" method="GET">
       <fieldset class="feed-program-form__fieldset feed-program-form__fieldset--bordered">
         <legend class="feed-program-form__fieldset-legend visually-hidden">Физические данные кота</legend>
-        <ul class="cat-parameters feed-program-form__list">
-          <li class="cat-parameters__item">
-            <label class="cat-parameters__label" for="cat-name">Имя:<sup>*</sup></label>
-            <input class="cat-parameters__input" type="text" id="cat-name" name="cat_name" placeholder="Барсик" required>
+        <ul class="feed-program-form__list">
+          <li class="field">
+            <label class="field__label" for="cat-name">Имя:<sup>*</sup></label>
+            <input class="field__input" type="text" id="cat-name" name="cat_name" placeholder="Барсик" required>
           </li>
-          <li class="cat-parameters__item ">
-            <label class="cat-parameters__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
-            <input class="cat-parameters__input" type="number" min="0.1" max="50" step="0.1" id="cat-weight" name="cat_weight" placeholder="7" required>
+          <li class="field ">
+            <label class="field__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+            <input class="field__input" type="number" min="0.1" max="50" step="0.1" id="cat-weight" name="cat_weight" placeholder="7" required>
           </li>
-          <li class="cat-parameters__item ">
-            <label class="cat-parameters__label" for="cat-age">Возраст (лет):</label>
-            <input class="cat-parameters__input" type="number" min="1" max="30" step="1" id="cat-age" name="cat_age" placeholder="7">
+          <li class="field ">
+            <label class="field__label" for="cat-age">Возраст (лет):</label>
+            <input class="field__input" type="number" min="1" max="30" step="1" id="cat-age" name="cat_age" placeholder="7">
           </li>
         </ul>
       </fieldset>
       <fieldset class="feed-program-form__fieldset feed-program-form__fieldset--bordered">
         <legend class="feed-program-form__fieldset-legend visually-hidden">Цель подбора программы питания</legend>
-        <ul class="radio-buttons feed-program-form__list">
-          <li class="radio-buttons__item">
-            <input class="radio-buttons__input" type="radio" name="feed_program_target" id="weight-loss" value="weight-loss" checked>
-            <label class="radio-buttons__label" for="weight-loss">Похудение</label>
+        <ul class="feed-program-form__list">
+          <li class="radio-field">
+            <input class="radio-field__input" type="radio" name="feed_program_target" id="weight-loss" value="weight-loss" checked>
+            <label class="radio-field__label" for="weight-loss">Похудение</label>
           </li>
-          <li class="radio-buttons__item">
-            <input class="radio-buttons__input" type="radio" name="feed_program_target" id="weight-gain" value="weight-gain">
-            <label class="radio-buttons__label" for="weight-gain">Набор массы</label>
+          <li class="radio-field">
+            <input class="radio-field__input" type="radio" name="feed_program_target" id="weight-gain" value="weight-gain">
+            <label class="radio-field__label" for="weight-gain">Набор массы</label>
           </li>
-          <li class="radio-buttons__item">
-            <input class="radio-buttons__input" type="radio" name="feed_program_target" id="need-help" value="need-help">
-            <label class="radio-buttons__label" for="need-help">Не знаю (нужен ваш совет)</label>
+          <li class="radio-field">
+            <input class="radio-field__input" type="radio" name="feed_program_target" id="need-help" value="need-help">
+            <label class="radio-field__label" for="need-help">Не знаю (нужен ваш совет)</label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="feed-program-form__fieldset">
         <legend class="feed-program-form__fieldset-legend">Контактные данные (владельца кота)</legend>
-        <ul class="contacts__list feed-program-form__list">
-          <li class="contacts__item">
-            <label class="contacts__label" for="owner-email">e-mail:<sup>*</sup></label>
-            <input class="contacts__input" type="email" id="owner-email" name="owner_email" placeholder="kuklachev@gmail.com" required>
+        <ul class="feed-program-form__list">
+          <li class="field">
+            <label class="field__label" for="owner-email">e-mail:<sup>*</sup></label>
+            <input class="field__input" type="email" id="owner-email" name="owner_email" placeholder="kuklachev@gmail.com" required>
           </li>
-          <li class="contacts__item">
-            <label class="contacts__label" for="owner-phone">Телефон:<sup>*</sup></label>
-            <input class="contacts__input" type="tel" id="owner-phone" name="owner_phone" placeholder="8 (960) 900-60-90" required>
+          <li class="field">
+            <label class="field__label" for="owner-phone">Телефон:<sup>*</sup></label>
+            <input class="field__input" type="tel" id="owner-phone" name="owner_phone" placeholder="8 (960) 900-60-90" required>
           </li>
         </ul>
       </fieldset>
@@ -89,22 +89,22 @@
       </fieldset>
       <fieldset class="feed-program-form__fieldset">
         <legend class="feed-program-form__fieldset-legend">Дополнительно</legend>
-        <ul class="checkboxes__list feed-program-form__list">
-          <li class="checkboxes__item">
-            <input class="checkboxes__item-input" type="checkbox" name="sweetener" id="sweetener" checked>
-            <label class="checkboxes__item-label" for="sweetener">Сахарозаменитель</label>
+        <ul class="feed-program-form__list">
+          <li class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" name="sweetener" id="sweetener" checked>
+            <label class="checkbox-field__label" for="sweetener">Сахарозаменитель</label>
           </li>
-          <li class="checkboxes__item">
-            <input class="checkboxes__item-input" type="checkbox" name="water" id="water">
-            <label class="checkboxes__item-label" for="water">Питьевая вода</label>
+          <li class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" name="water" id="water">
+            <label class="checkbox-field__label" for="water">Питьевая вода</label>
           </li>
-          <li class="checkboxes__item">
-            <input class="checkboxes__item-input" type="checkbox" name="milk" id="milk">
-            <label class="checkboxes__item-label" for="milk">Молоко</label>
+          <li class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" name="milk" id="milk">
+            <label class="checkbox-field__label" for="milk">Молоко</label>
           </li>
-          <li class="checkboxes__item">
-            <input class="checkboxes__item-input" type="checkbox" name="vitamins" id="vitamins">
-            <label class="checkboxes__item-label" for="vitamins">Витамины</label>
+          <li class="checkbox-field">
+            <input class="checkbox-field__input" type="checkbox" name="vitamins" id="vitamins">
+            <label class="checkbox-field__label" for="vitamins">Витамины</label>
           </li>
         </ul>
       </fieldset>
