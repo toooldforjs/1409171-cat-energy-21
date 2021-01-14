@@ -1,0 +1,13 @@
+.checkbox-field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+  column-gap: 16px;
+  &__input {
+  }
+  &__label {
+    @include oswald-normal(16px, 18px);
+    text-transform: uppercase;
+  }
+}

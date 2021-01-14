@@ -1,0 +1,43 @@
+.goods {
+  display: grid;
+  grid-template:
+    "img title"
+    "img properties"
+    "button button";
+  grid-template-columns: repeat(2, 1fr);
+  &--small-card {
+    grid-template:
+      "title"
+      "properties"
+      "button";
+  }
+  &__preview-link {
+    grid-area: img;
+    width: 140px;
+    height: 112px;
+    box-sizing: border-box;
+    display: flex;
+    @include centered();
+  }
+  &__preview-image {
+    max-height: 80%;
+    object-fit: cover;
+  }
+  &__product-name {
+    grid-area: title;
+    @include oswald-normal(16px, 20px);
+    text-transform: uppercase;
+    color: var(--catalog-gray);
+    &--small-card {
+      line-height: 16px;
+    }
+  }
+  &__properties {
+    grid-area: properties;
+    @include arial-normal(12px, 16px);
+    color: var(--basic-gray);
+  }
+  &__order-button {
+    grid-area: button;
+  }
+}

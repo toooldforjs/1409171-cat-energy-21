@@ -1,0 +1,39 @@
+.footer {
+  width: $mw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "contacts contacts contacts"
+    "map map map"
+    ". links .";
+  grid-template-columns: calc((100% - #{$mw-no-indent}) / 2) 1fr calc((100% - #{$mw-no-indent}) / 2);
+  background-color: var(--card-gray);
+  &__contacts {
+    grid-area: contacts;
+    background-color: var(--basic-white);
+    display: grid;
+    grid-template-areas: ". announcement address .";
+    grid-template-columns: calc((100% - #{$mw-no-indent}) / 2) repeat(2, 1fr) calc((100% - #{$mw-no-indent}) / 2);
+    padding: 28px 0;
+    &--form-page {
+      background-color: var(--card-gray);
+    }
+    &--catalog-page {
+      background-color: var(--card-gray);
+    }
+  }
+  &__announcement {
+    grid-area: announcement;
+    text-transform: uppercase;
+  }
+  &__address {
+    grid-area: address;
+    line-height: 20px;
+  }
+  &__map {
+    grid-area: map;
+  }
+  &__links {
+    grid-area: links;
+  }
+}

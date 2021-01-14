@@ -1,0 +1,23 @@
+.feed-program-form {
+  display: grid;
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 22px 0 11px 0;
+    &--bordered {
+      border-bottom: 1px solid var(--border-gray);
+    }
+  }
+  &__fieldset-legend {
+    padding-top: 26px;
+  }
+  &__list {
+    @include list();
+  }
+  &__required-info {
+    justify-self: center;
+    line-height: 18px;
+    padding-top: 21px;
+    padding-bottom: 32px;
+  }
+}

@@ -1,0 +1,57 @@
+.toggle-result {
+  @include oswald-normal(16px, 20px);
+  text-transform: uppercase;
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    min-width: 280px;
+    min-height: 232px;
+    background-image: url(../../img/cat-before-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 4px 11px 6px 11px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 14px;
+      background-color: var(--basic-white);
+      border: 1px solid var(--special-gray);
+      border-radius: 6px;
+      box-sizing: border-box;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 6px;
+      background-color: var(--main-green);
+      border: none;
+      border-radius: 6px;
+      box-sizing: border-box;
+      z-index: 2;
+      top: 50%;
+      left: 44%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.toggle-result__switch:checked ~ .toggle-result__label > .toggle-result__image {
+  background-image: url(../../img/cat-after-mobile.png);
+}
+.toggle-result__switch:checked ~ .toggle-result__label .toggle-result__controls::after {
+  left: 56%;
+}

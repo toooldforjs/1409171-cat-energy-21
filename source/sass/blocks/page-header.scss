@@ -1,0 +1,56 @@
+.page-header {
+  width: $mw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "nav nav nav"
+    "logo title menu-button";
+  grid-template-columns: 66px 1fr 66px;
+  grid-column-gap: 10px;
+  @media (min-width: $tw) {
+    width: 100%;
+    height: 66px;
+    margin-top: 24px;
+    margin-bottom: 64px;
+    grid-template-areas: ". logo title nav .";
+    grid-template-columns: calc((100% - #{$tw-no-indent}) / 2) auto auto 1fr calc((100% - #{$tw-no-indent}) / 2);
+    grid-column-gap: 0;
+    align-items: center;
+  }
+  &__logo {
+    grid-area: logo;
+    @include centered();
+    height: 66px;
+    @media (min-width: $tw) {
+      padding-right: 20px;
+    }
+  }
+  &__logo-title {
+    grid-area: title;
+    @include centered();
+    height: 66px;
+  }
+  &__menu-button {
+    grid-area: menu-button;
+    @media (min-width: $tw) {
+      display: none;
+    }
+  }
+  &__main-nav {
+    grid-area: nav;
+    @media (min-width: $tw) {
+      justify-self: end;
+    }
+  }
+  &--menu-opened {
+    grid-template-areas:
+      "logo title menu-button"
+      "nav nav nav";
+    @media (min-width: $tw) {
+      grid-template-areas: ". logo title nav .";
+    }
+  }
+  &--no-js .page-header__menu-button {
+    display: none;
+  }
+}

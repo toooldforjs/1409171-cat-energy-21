@@ -1,0 +1,89 @@
+.food-types {
+  padding: 22px 0;
+  &__list {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @media (min-width: $tw) {
+      row-gap: 30px;
+    }
+  }
+  &__item {
+    display: grid;
+    grid-template-areas:
+      "pic title title title"
+      "text text text text"
+      "link link link link";
+    grid-template-columns: 50px 1fr 1fr 1fr;
+    background-color: var(--card-gray);
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    @media (min-width: $tw) {
+      grid-template-areas:
+        "title pic"
+        "text pic"
+        "link pic";
+      grid-template-columns: 1fr 200px;
+      height: 372px;
+      padding: 77px 62px 53px 52px;
+    }
+  }
+  &__image {
+    grid-area: pic;
+    height: 50px;
+    width: 50px;
+    background-color: var(--main-green);
+    border-radius: 50%;
+    @media (min-width: $tw) {
+      width: 200px;
+      height: 200px;
+      align-self: center;
+    }
+  }
+  &__title {
+    grid-area: title;
+    text-transform: uppercase;
+    align-self: center;
+    padding-left: 19px;
+    @media (min-width: $tw) {
+      padding-left: 0;
+      @include oswald-normal(36px, 36px);
+    }
+  }
+  &__text {
+    grid-area: text;
+    border-bottom: 1px solid var(--border-gray);
+    padding: 22px 0;
+    @media (min-width: $tw) {
+      @include arial-normal(16px, 24px);
+      border: none;
+      padding-right: 15px;
+    }
+  }
+  &__link {
+    grid-area: link;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    width: 140px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../../img/icon-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      width: 30px;
+      height: 30px;
+      left: 110px;
+    }
+  }
+  &__link-text {
+    text-transform: uppercase;
+    @media (min-width: $tw) {
+      @include oswald-normal(20px, 30px);
+    }
+  }
+}

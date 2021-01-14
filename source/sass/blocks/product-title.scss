@@ -1,0 +1,16 @@
+.product-title {
+  display: grid;
+  grid-template:
+    "name name"
+    "type weight";
+  justify-content: start;
+  &__name {
+    grid-area: name;
+  }
+  &__type {
+    grid-area: type;
+  }
+  &__weight {
+    grid-area: weight;
+  }
+}

@@ -1,0 +1,14 @@
+.radio-field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 13px;
+  column-gap: 15px;
+  &__input {
+    padding: 13px 15px;
+  }
+  &__label {
+    @include oswald-normal(16px, 18px);
+    text-transform: uppercase;
+  }
+}

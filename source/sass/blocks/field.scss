@@ -1,0 +1,21 @@
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+  column-gap: 14px;
+  @include oswald-normal(16px, 18px);
+  text-transform: uppercase;
+  &__label {
+  }
+  &__input {
+    flex-grow: 1;
+    color: var(--basic-gray);
+    font-family: inherit;
+    font-style: inherit;
+    text-transform: inherit;
+    line-height: inherit;
+    border: 1px solid var(--field-border-gray);
+    padding: 13px 15px;
+  }
+}
