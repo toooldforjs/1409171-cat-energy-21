@@ -1,0 +1,30 @@
+@mixin arial-normal($fs, $lh) {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin oswald-normal($fs, $lh) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin oswald-bold($fs, $lh) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin list() {
+  list-style: none;
+  padding: 0;
+}
+@mixin centered() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

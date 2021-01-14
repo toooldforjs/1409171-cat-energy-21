@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  background-color: var(--main-green);
+  height: 40px;
+  min-width: 280px;
+  border: none;
+  @include centered();
+  &--show-more {
+    background-color: var(--card-gray);
+  }
+  &--main-promo {
+    width: 244px;
+    height: 54px;
+  }
+
+  &__title {
+    @include oswald-normal(14px, 18px);
+    color: var(--basic-white);
+    text-transform: uppercase;
+    &--show-more {
+      color: var(--basic-gray);
+    }
+    &--main-promo {
+      @include oswald-normal(20px, 20px);
+    }
+  }
+}

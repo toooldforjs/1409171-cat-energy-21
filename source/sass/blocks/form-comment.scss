@@ -1,0 +1,11 @@
+.form-comment {
+  &__text {
+    width: 100%;
+    color: var(--basic-gray);
+    @include oswald-normal(16px, 18px);
+    text-transform: uppercase;
+    border: 1px solid var(--field-border-gray);
+    padding: 10px 12px;
+    box-sizing: border-box;
+  }
+}

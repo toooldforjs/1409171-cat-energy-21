@@ -1,0 +1,99 @@
+.page {
+  height: 100%;
+  &__body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    @include arial-normal(14px, 18px);
+    color: var(--basic-gray);
+    &--form-page {
+      color: var(--basic-black);
+    }
+    &--catalog-page {
+      color: var(--basic-black);
+    }
+  }
+  &__main {
+    &--main-page {
+      display: grid;
+      grid-template-areas:
+        ". title ."
+        "feed-program feed-program feed-program"
+        ". food-types ."
+        ". how-it-works ."
+        "slimming-example slimming-example slimming-example";
+      grid-template-columns: calc((100% - #{$mw-no-indent}) / 2) 1fr calc((100% - #{$mw-no-indent}) / 2);
+      @media (min-width: $tw) {
+        grid-template-columns: calc((100% - #{$tw-no-indent}) / 2) 1fr calc((100% - #{$tw-no-indent}) / 2);
+      }
+    }
+    &--form-page {
+      display: grid;
+      grid-template-areas:
+        ". title ."
+        ". text ."
+        ". form .";
+      grid-template-columns: calc((100% - #{$mw-no-indent}) / 2) 1fr calc((100% - #{$mw-no-indent}) / 2);
+      @media (min-width: $tw) {
+        grid-template-columns: calc((100% - #{$tw-no-indent}) / 2) 1fr calc((100% - #{$tw-no-indent}) / 2);
+      }
+    }
+    &--catalog-page {
+      display: grid;
+      grid-template-areas:
+        ". title ."
+        ". goods ."
+        ". sub-heading ."
+        ". more-goods ."
+        ". promo .";
+      grid-template-columns: calc((100% - #{$mw-no-indent}) / 2) 1fr calc((100% - #{$mw-no-indent}) / 2);
+      @media (min-width: $tw) {
+        grid-template-columns: calc((100% - #{$tw-no-indent}) / 2) 1fr calc((100% - #{$tw-no-indent}) / 2);
+      }
+    }
+  }
+
+  &__heading {
+    grid-area: title;
+    margin: 27px 0 37px 0;
+    &--catalog-page {
+      margin: 27px 0 41px 0;
+    }
+  }
+  &__feed-program {
+    grid-area: feed-program;
+  }
+  &__food-types {
+    grid-area: food-types;
+  }
+  &__how-it-works {
+    grid-area: how-it-works;
+  }
+  &__slimming-example {
+    grid-area: slimming-example;
+    max-width: $mw;
+    margin: 0 auto;
+  }
+  &__description {
+    grid-area: text;
+    @include oswald-normal(14px, 18px);
+    margin-bottom: 39px;
+  }
+  &__form {
+    grid-area: form;
+  }
+  &__goods {
+    grid-area: goods;
+  }
+  &__more-goods {
+    grid-area: more-goods;
+  }
+  &__sub-heading {
+    grid-area: sub-heading;
+    @include oswald-normal(24px, 24px);
+    padding: 25px 0 36px 0;
+  }
+  &__promo {
+    grid-area: promo;
+  }
+}

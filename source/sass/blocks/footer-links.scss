@@ -1,0 +1,24 @@
+.footer-links {
+  display: grid;
+  &__row:not(:last-child) {
+    border-bottom: 1px solid var(--border-gray);
+  }
+  &__logo-title {
+    @include centered();
+    padding-top: 39px;
+    padding-bottom: 33px;
+  }
+
+  &__social-list {
+    @include list();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 3px;
+  }
+  &__social-item {
+    margin: 0;
+    padding: 0;
+  }
+}

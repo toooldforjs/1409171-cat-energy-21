@@ -1,0 +1,40 @@
+.how-it-works {
+  padding: 22px 0;
+  &__list {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 38px;
+  }
+  &__item {
+    display: flex;
+  }
+  &__image {
+    display: flex;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-green);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    &--leaf {
+      background-image: url(../../img/icon-leaf.svg);
+    }
+    &--tub {
+      background-image: url(../../img/icon-tub.png);
+    }
+    &--eat {
+      background-image: url(../../img/icon-eat.svg);
+    }
+    &--alarm {
+      background-image: url(../../img/icon-alarm.svg);
+    }
+  }
+  &__description {
+    padding-left: 10px;
+  }
+  &__number {
+    display: none;
+  }
+}

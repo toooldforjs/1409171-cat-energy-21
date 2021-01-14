@@ -1,0 +1,34 @@
+.show-more {
+  display: grid;
+  grid-template:
+    "img"
+    "title"
+    "info"
+    "button";
+  padding-bottom: 25px;
+  &__image {
+    grid-area: img;
+    display: flex;
+    @include centered();
+    padding: 23px;
+  }
+  &__title {
+    grid-area: title;
+    text-align: center;
+    padding-bottom: 8px;
+    @include oswald-normal(16px, 20px);
+    text-transform: uppercase;
+    color: var(--another-gray);
+  }
+  &__info {
+    grid-area: info;
+    text-align: center;
+    padding-bottom: 21px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--basic-gray);
+  }
+  &__button {
+    grid-area: button;
+  }
+}

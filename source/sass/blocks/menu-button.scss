@@ -1,0 +1,33 @@
+.menu-button {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  background-color: transparent;
+  border: none;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    top: 25px;
+    right: 20px;
+    background-color: var(--basic-black);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    top: 33px;
+    right: 20px;
+    background-color: var(--basic-black);
+  }
+  &__burger-mid-line {
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    top: 41px;
+    right: 20px;
+    background-color: var(--basic-black);
+  }
+}

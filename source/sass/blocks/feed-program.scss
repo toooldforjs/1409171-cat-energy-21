@@ -1,0 +1,79 @@
+.feed-program {
+  width: $mw;
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "intro intro intro"
+    "img img img"
+    "button button button";
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  justify-self: center;
+  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 302px, transparent 302px),
+    url(../../img/background-cat-mobile.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: var(--basic-white);
+  @media (min-width: $tw) {
+    grid-template-areas:
+      ". title ."
+      ". intro ."
+      ". img ."
+      ". img .";
+    grid-template-columns: calc((100% - #{$tw-no-indent}) / 2) 1fr calc((100% - #{$tw-no-indent}) / 2);
+    background: none;
+    color: var(--basic-black);
+  }
+  &__title {
+    grid-area: title;
+    @include oswald-normal(36px, 36px);
+    text-align: center;
+    margin-top: 27px;
+    @media (min-width: $tw) {
+      @include oswald-normal(60px, 60px);
+      text-align: left;
+      margin-left: 87px;
+    }
+  }
+  &__intro {
+    grid-area: intro;
+    @include oswald-normal(14px, 14px);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
+    @media (min-width: $tw) {
+      @include oswald-normal(20px, 20px);
+      text-align: left;
+      height: 14px;
+      margin-left: 88px;
+    }
+  }
+  &__image {
+    grid-area: img;
+    background-image: url(../../img/promo-food-can-mobile.png);
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 270px;
+    justify-self: center;
+    margin-top: 25px;
+    z-index: 1;
+    @media (min-width: $tw) {
+      background-image: url(../../img/promo-food-can-tablet.png);
+      width: 709px;
+      height: 609px;
+    }
+  }
+  &__link {
+    grid-area: img;
+    align-self: end;
+    justify-self: center;
+    @media (min-width: $tw) {
+      z-index: 2;
+      align-self: start;
+      justify-self: start;
+      margin-left: 82px;
+      margin-top: 35px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// * {
+//   outline: 1px red solid !important;
+//   visibility: visible !important;
+// }
+
+a,
+a:visited {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.title-h1 {
+  @include oswald-normal(36px, 36px);
+}
+.title-h2 {
+  @include oswald-normal(36px, 40px);
+}
+.title-h3 {
+  @include oswald-normal(24px, 26px);
+}
+.title-h4 {
+  @include oswald-normal(16px, 18px);
+}

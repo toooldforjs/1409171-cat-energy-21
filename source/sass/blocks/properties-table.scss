@@ -1,0 +1,11 @@
+.properties-table {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  &--small-card {
+    margin: 13px 0 15px 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

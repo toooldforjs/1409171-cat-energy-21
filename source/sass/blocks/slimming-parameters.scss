@@ -1,0 +1,23 @@
+.slimming-parameters {
+  width: 124px;
+  text-align: center;
+  &__value {
+    @include oswald-normal(24px, 24px);
+    display: block;
+    text-transform: uppercase;
+    border: 1px solid var(--special-gray);
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 15px 5px 17px 5px;
+  }
+  &__description {
+    @include arial-normal(12px, 12px);
+    display: inline-block;
+    position: relative;
+    background-color: var(--bg-gray);
+    max-width: 88px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    top: -8px;
+  }
+}
